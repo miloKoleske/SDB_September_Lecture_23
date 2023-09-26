@@ -1,0 +1,123 @@
+/* This is a comment within CSS */
+/* 'ctrl + /' will also make a comment */
+/* on mac, this is 'cmd + /' */
+
+/* 
+These Comments
+Can Span
+Multiple Lines, won't ever close until tag ends 
+*/
+
+/* 
+    List of CSS selectors
+        -element selector - select all instances of a given tag from HTML page
+            -body
+            -p
+
+ */
+
+
+
+/* I want to change the color of my p tags */
+/* I have to start by telling my CSS file what I want to change */
+
+/* body selector - what we write before the {} is going to be our "selector". A "selector" is the term for the element or elements on my HTML page which are being edited by this style rule */
+
+body {
+background-color: #e1b1b4;
+/* style rule = everything inside of {}, every alteration, within itself, is called a property */
+}
+
+p, h1, hr { 
+/* selects all <p> Tags */
+/* select different elements at once with ',' */
+    color: rgb(180, 23, 23); /*change the text color to "orangered"*/
+    /*  3 ways to refer to color:
+        -color keywords:
+            -green, lightgray, etc.
+        -rgb 
+            -rgb(0-255, 0-255, 0-255)
+            -each number represents how string Red, green, and blue is 
+        -Hex color:
+        -#002255
+        -Each pair of values represents one of our "rgb" values, hex color is made of 3 pairs of characters
+        */
+    }
+    
+    /* select classes with '.' this selects all elements with this class name */
+    
+    .header {
+        text-align: center;
+    }
+    
+    /* compound Selectors: more than a single selector in one rule */
+    /* change all h tags at same time */
+    h1, h2, h3, h4, h5, h6 {
+        /* will change all h tags at same time */
+        text-decoration: overline;
+    }
+
+#unique {
+    /* select id with a # (octothorpe)*/
+    text-decoration: underline overline;
+    background-color: lightskyblue;
+    }
+    
+    /* only use id on one item, don't use in place of class */
+    /* JS is only going to pay attention to first item with given ID when we start making our pages functional */
+
+    /* focus selector to work on .btn classes within a specific container */
+    nav .btn {
+        text-shadow: 2px 2px 2px white;
+    }
+
+    /* This selector will only effect the direct children of our nav ie. elements within a span will not be selected*/
+    nav> .btn{
+        /* this is going to change text color using class */
+        background-color:azure;
+    }
+
+    /* a {
+        /* changes text color using tag/element name
+        color: darkgoldenrod; !important
+    } */
+
+    /* CSS Hierarchy 
+    
+    Allows CSS to use distinct levels of 'priority'. Order of priority from weakest to strongest:
+
+    External Stylesheet: .css file while is not html file we have our webpage in
+    -element
+    -class
+    -ID
+    -!important
+    
+    Internal Stylesheet: css written within HTML, within <head>, add a <style> tag
+    -element
+    -class
+    -ID
+    -!important
+
+    Inline styling: when <style> property is added to an element within HTML file
+    
+    */
+
+    /* Styling an unvisited link */
+    a:link {
+        color: peru;
+    }
+
+    /* Styling a visited link */
+    a:visited {
+        color: violet;
+    }
+
+    /* Styling a link that mouse is hovering over */
+    a:hover {
+        color:rgb(57, 160, 230)
+    }
+
+    /* styling a link when being clicked */
+    a:active {
+        color: blueviolet;
+    }

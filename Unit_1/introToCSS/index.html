@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to CSS</title>
+    <!-- I am going to connect my CSS file -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- a 'link' tag is used to connect an external CSS file to our HTML file -->
+    <!-- ./ links into current directory aka a relative path 
+    ../ links to previous directory-->
+    <style>
+        /* a {
+            color: darkviolet; !important
+        } */
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#e" class="btn">Home</a>
+    <a href="#f" class="btn">News</a>
+    <span>
+        <a href="#g" class="btn">Contact</a>
+    </span>
+    <a href="#d" class="btn">About</a>
+    <!-- select line + alt + shift + up/down arrow key duplicates -->
+</nav>
+<a href="#" class="btn" style="color: navy;" >External Link</a>
+
+    <div>
+        <h1 class="header">This is my Intro to CSS page</h1>
+        <!-- to alter both tags at once, hol alt tag -->
+        <!-- Properties assign individuality to elements, pulling them out of style chronology
+            Properties include: class, id -->
+        <p class="header">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas distinctio assumenda obcaecati suscipit neque accusamus et quasi nam quidem rem. Expedita, pariatur? Deserunt eligendi quasi, ea omnis ad animi minima?</p>
+
+        <h1 class="header">This is my Class Example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim praesentium magni quis voluptatem consectetur voluptatum, eveniet quod ad laborum sequi ratione odio est facere nulla quos, labore tempore omnis quaerat?</p>
+    </div>
+    <hr>
+    <h1 class="header" id="unique">this is my ID example</h1>
+</body>
+</html>
