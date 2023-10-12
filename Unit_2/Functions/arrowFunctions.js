@@ -117,8 +117,23 @@ function tipCalc(subTotal) {
     return total.toFixed(2);
 }
 
-let total = tipCalc(19.72)
+tipCalc(100);
+// let total = tipCalc(19.72)
+// console.log(total);
+
+// another way
+
+let bill = 100;
+function tipCalc(subTotal) {
+    let tip = subTotal* .2
+    let total = subTotal + tip;
+    return total.toFixed(2);}
+
+let total = tipCalc(bill)
 console.log(total);
+
+
+
 
 
 
@@ -130,5 +145,5 @@ let hello = () => {
 
 console.log(hello());
 
-
+// return = way to provide data that has been collected thru processing of a function
 
