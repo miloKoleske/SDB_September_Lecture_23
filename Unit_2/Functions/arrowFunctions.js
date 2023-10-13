@@ -129,7 +129,7 @@ function tipCalc(subTotal) {
     let total = subTotal + tip;
     return total.toFixed(2);}
 
-let total = tipCalc(bill)
+let total = tipCalc()
 console.log(total);
 
 
