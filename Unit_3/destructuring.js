@@ -53,8 +53,3 @@ console.log('Additional info ', otherInfo);
 
 const [,,,birthday] = fullName2;
 console.log('birthday: ', birthday);
-
-
-const numbersOne = [1, 2, 3];
-const numbersTwo = [4, 5, 6];
-const numbersCombined = [...numbersOne, ...numbersTwo];
