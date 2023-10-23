@@ -40,16 +40,62 @@ const hulu = {
     id: 1,
     movies: [
         {
-            title: 'Name'
+            title: 'The Dark Knight',
             genre:[
-                
-            ]
-            rating:
-            runTime:
-            year:
+                'Action', 'Crime', 'Drama'
+            ],
+            rating: 'PG-13',
+            runTime: 152,
+            year: 2008
+        },
+        {
+            title: 'The Green Mile',
+            genre:[
+                'Fantasy', 'Crime', 'Drama'
+            ],
+            rating: 'R',
+            runTime: 189,
+            year: 1999
         },
     ],
-    shows: 'jlkjfdlkjfd'
+    shows: [
+        {
+        title: `Bob's Burgers`,
+        numberOfSeasons: 13,
+        seasons: [
+            {
+            season: 1,
+            noOfEpisodes: 13,
+            episodes: [
+                {
+                    title: 'Human Flesh',
+                    airDate: '01-09-2011'
+                },
+                {
+                        title: 'Crawl Space',
+                        airDate: '01-16-2011'
+                },
+                ],
+            },
+            {
+                season: 2,
+                noOfEpisodes: 9,
+                episodes: [
+                    {
+                        title: 'The Belchies',
+                        airDate: '01-09-2011'
+                    },
+                    {
+                        title: 'Crawl Space',
+                        airDate: '01-16-2011'
+                    },
+                ],
+            }
+            ]
+        }
+    ],
 }
 
-console.log(hulu.movies[0]);
+console.log(hulu.movies);
+console.log(hulu.shows[0]);
+console.log(hulu.shows[0].seasons[1].episodes[0].title)
