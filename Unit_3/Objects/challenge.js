@@ -75,23 +75,23 @@ const hulu = {
                         title: 'Crawl Space',
                         airDate: '01-16-2011'
                 },
-                ],
-            },
-            {
-                season: 2,
-                noOfEpisodes: 9,
-                episodes: [
-                    {
-                        title: 'The Belchies',
-                        airDate: '01-09-2011'
-                    },
-                    {
-                        title: 'Crawl Space',
-                        airDate: '01-16-2011'
-                    },
-                ],
-            }
-            ]
+            ],
+        },
+        {
+            season: 2,
+            noOfEpisodes: 9,
+            episodes: [
+                {
+                    title: 'The Belchies',
+                    airDate: '01-09-2011'
+                },
+                {
+                    title: 'Crawl Space',
+                    airDate: '01-16-2011'
+                },
+            ],
+        }
+    ]
         }
     ],
 }

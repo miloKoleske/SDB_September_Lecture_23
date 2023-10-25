@@ -47,6 +47,7 @@ console.log('BEFORE: ', Object.keys(futurama));
 delete futurama.currently_running;
 console.log('AFTER: ', Object.keys(futurama));
 
+// * object.freeze()
 Object.freeze(theSimpsons);
 theSimpsons.id = 2;
 console.log(theSimpsons.id);

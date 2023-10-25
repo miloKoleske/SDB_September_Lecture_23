@@ -74,6 +74,11 @@ presidents.forEach(president)
     }
 };
 
+/* 
+consider: 
+array methods
+*/
+
 
 
 
