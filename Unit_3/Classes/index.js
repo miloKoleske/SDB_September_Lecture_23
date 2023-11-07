@@ -1,5 +1,6 @@
 // ! Classes
 /* 
+    - good for designing inventory
     - Introduced in 2015
     - function that helps us create objects
     - defines a category of objects
@@ -145,3 +146,10 @@ console.log(itemToSell);
 let anotherItem = Expense.addUpChargeForProfit(5);
 anotherItem.addTax(0.06);
 console.log(anotherItem);
+
+
+
+
+function stringInt(str) {
+	return typeof Number(str)
+}

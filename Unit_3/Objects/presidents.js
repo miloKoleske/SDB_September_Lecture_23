@@ -58,21 +58,14 @@ const presidents = [
 */
 
 
-// console.log(presidents.length); // 45 presidents
-// function alive (presidents, passed) {
-//     if (presidents.passed == undefined) {
-//         console.log(presidents[0])
-//     }
-// };
-
-presidents.forEach(president)
-    {if (presidents.passed === undefined)
-    {
-        console.log(`${presidents.first} is alive`)
-    } else {
-    console.log(`${presidents.first} is dead`)
+console.log(presidents.length); // 45 presidents
+function alive (presidents, passed) {
+    if (presidents.passed == undefined) {
+        console.log(presidents[0])
     }
 };
+
+
 
 /* 
 consider: 
