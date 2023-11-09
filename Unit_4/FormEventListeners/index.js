@@ -32,14 +32,13 @@ function displayTable() {
     //console.log('DT: ', animals);
 
     while(table.firstChild) {
-        table.removeChild(table.firstChild);
+        table.removeChild(table.firstChild); // this is the FULL ROW of DOCUMENT, not ARRAY
     }
 
     animals.forEach((animal, i) => {
     //* Create    
         let tr = document.createElement('tr') // will be the parent element of any element for td
         let id = document.createElement('td'); // all of these are currently empty
-        let id = document.createElement('td');
         let name = document.createElement('td');
         let sex = document.createElement('td');
         let species = document.createElement('td'); // all of these elements are table data, so .createElement leads to td, think of this like <td></td>*5
@@ -58,27 +57,10 @@ function displayTable() {
     table.appendChild(tr);
 
     // ! Look @ section at 8:10 - 8: 15 [time on eric's monitor] for a full explanation of what we're doing
-
+    // ! 8:30 
     }
-
     )
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // .addEventListener (x) goes to INPUT type (submit)
 // 'hit' is disappearing quickly - page default is to refresh
@@ -95,3 +77,5 @@ function displayTable() {
 //  ! Look into global variables
 
 //  ! Look into truthy and falsy values
+
+//  ! Look into flow of code reading - how forEach, while loops read
