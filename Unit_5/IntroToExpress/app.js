@@ -6,6 +6,7 @@ const PORT = 4000; //common empty port, server port within localhost. Using 'ALL
 // * IMPORTS
 const practiceController = require('./controllers/practice.controller'); 
 const authController = require('./controllers/auth.controller');
+const routeController = require('./controllers/route.controller');
 const { logTime } = require('./utils');
 
 // * MIDDLEWARE
@@ -17,12 +18,11 @@ console.log('pathway:', __dirname); // doesn't matter what name of folder is, he
 
 
 // * CONTROLLER
-
-
 app.use('/practice', practiceController); // param is pushing towards the user routes (currently empty) - says Cannot GET
 // Any traffic coming in with 'practice' after localhost:4000 will route to practice.controller.js
 // ex: localhost:4000/practice
 app.use('/todo', authController);
+app.use('/routes', routeController);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
