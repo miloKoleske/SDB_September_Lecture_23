@@ -3,6 +3,7 @@
 - Create an `express application` called **Express Challenge**
   - The entry point file will be `index` (not `app`).
   - Create a `gitignore` file and apply the necessary file or folders within it.
+    - terminal in root folder `npm init -y`
 - Set this application to accept `JSON`.
 - This will run on a port of your choosing.
 - Create a middleware function
@@ -10,7 +11,7 @@
   - The function will need to capture the current time as a **timestamp**.
     - Consider: [W3 Schools](https://www.w3schools.com/jsref/jsref_obj_date.asp).
     - Will need to store in the `req` a `timestamp` key that holds a value of HH:MM.
-- Create a `data.json` file and inject the following:
+- Create a `data.json` file and inject the following: DONE
 ```json
 
 [
@@ -34,7 +35,7 @@
         "title": "Of Mice and Men",
         "author": "John Steinbeck"
     }
-]
+] DONE
 ```
 - Create 4 different Routes:
 

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const db = require('../newExpressApp/data.json');
+const db = require('../data.json');
 
 // * Get All
 router.get('/', (req,res) =>{
@@ -34,11 +34,16 @@ router.get('/find-1/:id', (req,res) => {
 })
 
 // * Get ONE by Title using query
-router.get('/findtitle/:title', (req, res) => {
+
+router.get('/getOneByTitle/', (req,res) => {
+    console.log('hit');
     try {
-        if (title) {
+        if (title && author) {
             res.status(200).json ( {
-                    title: title
+                results: {
+                    title: title,
+                    author: author
+                }
             })
         } else {
             throw new Error('Error message to send')
@@ -47,23 +52,8 @@ router.get('/findtitle/:title', (req, res) => {
         res.status(500).send(
         )
     }
-        }
-)
-/* router.get('/findtitle/:title', (req,res) => {
-    //console.log(req.params)
-    try {
-        let {id} = req.params; //deconstruction
-        let results = db.filter( i => i.title == title);
-        console.log(results);
-        res.status(200).json({
-            results: results[0]
-        })
-    } catch (error) {
-        res.status(500).json ({
-        error: err.message
-        })
-    } 
-}) */
+});
+
 
 const {title, author} = req.query;
 router.post('/titleAuthor', (req, res) => {
@@ -86,3 +76,6 @@ router.post('/titleAuthor', (req, res) => {
 });
 
 module.exports = router;
+router.post('/newBook', (req, res) => {
+
+})

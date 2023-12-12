@@ -16,7 +16,6 @@ app.use(express.json()); // Provides us access to use JSON w/in routes)
 app.use(express.static(`${__dirname}/public`)); // IntroToExpress/public
 console.log('pathway:', __dirname); // doesn't matter what name of folder is, helps when devs don't all have same directory name
 
-
 // * CONTROLLER
 app.use('/practice', practiceController); // param is pushing towards the user routes (currently empty) - says Cannot GET
 // Any traffic coming in with 'practice' after localhost:4000 will route to practice.controller.js
