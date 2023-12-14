@@ -85,6 +85,85 @@ Database:
         - `example.env`
 
 
+## Bcrypt
+`npm i bcrypt`
+- dependency that handles encryption of data
+  - mostly commonly for password (but not limited)
+
+## Encryption
+- encripted before stored into database
+- Plain text passwords are not secure within the database
+- Allows another level of security for both user and application
+  - If the database never knows it, less desirable to "hack"
+    - passwords become encoded 
+
+## Hashing
+- An algorithm to change plain text into various characters.
+  - transformed as a **one-way value**. 
+  - practically impossible to turn hashed value back to original string.
+- Encrypted prior to storing in DB
+- No matter length of string (password), hash value is the same length.
+  - Like strings will result in the same hashed input.
+  - **needs `salting`**
+- Basically exists for security for individuals that use same password for all needs. Assists in security against hackers
+
+## Salting
+- includes random strings within the plain text being hashed.
+- Makes for unpredictability for the hashed value.
+- We can denote the number of "salts"
+  - Good value is 10-13 iterations.
+  - Even if two users share same password, it should not show the same encryption, so that both users don't know each other have same pw
+
+  example code:
+
+```js
+bcrypt.hashSync("abc123", 10);
+```
+- first param = password
+- second param = number of times the password will be salted.
+
+
+## JWT
+
+- JSON Web Token
+- `npm i jsonwebtoken`
+- A way for our server to authenticate the user.
+example code:
+```js
+              dependency -> payload -> message ---------> expiration: 1 day
+const token = jwt.sign({id: user._id}, "secret message", {expiresIn: 60 * 60 * 24});
+```
+- `sign(payload, message, options)` 
+  - 3 arguments:
+    - payload
+      - In the sample we are using an object that details the id of the user.
+    - encrypt/decrypt message
+      - passed in as a string in the sample
+      - Typically stored as a `.env` variable.
+    - Options sets (expiration)
+      -  represents seconds or a string time span
+         -  ex: `"2 days"` or `"10h"`
+
+
+
+
+
+
+
+
+
+
+
+
+
+### NOTE: Look into web security coding
+
+
+
+
+
+
+
 
 
 
