@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const User = require('../models/user.model');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt/');
 const jwt = require('jsonwebtoken');
-// ! const SECRET = require('jsonwebtoken');
+const SECRET = require('jsonwebtoken');
 
 
 const testingBcrypt = string => {
@@ -80,5 +80,28 @@ router.post('/signup', async(req,res) => {
             }) 
         }
     })
+
+    router.delete('/:id', async (req,res) => {
+        try{ 
+            // capture data
+            const {id} = req.params;
+
+            //use delete method to locate and remove user
+            const deleteUser = await User.deleteOne({_id: id});
+            console.log(deleteUser);
+
+            //respond to client
+            deleteUser.deletedCount ? 
+            res.status(200).json({
+                result: 'user is deleted'
+            }):
+            res.status(404).json({
+                result: 'this user does not exist'
+            })
+        } catch (err) {
+                error: err.message
+            }
+        }
+    )
 
     module.exports = router;

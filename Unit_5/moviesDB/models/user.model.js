@@ -26,3 +26,4 @@ const UserSchema = new mongoose.Schema({
 module.exports = mongoose.model('User', UserSchema); // allows us various methods thru mongoose to communicate to each other 
 // UserSchema = shape of the object
 // .model gives access to all of mongoose's models (first, lastName, etc)
+

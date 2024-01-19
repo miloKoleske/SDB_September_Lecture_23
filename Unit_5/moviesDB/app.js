@@ -7,6 +7,8 @@ const PORT = process.env.PORT; // port depends on .env file, go look for PORT va
 const MONGO = process.env.MONGODB; // mongo depends on .env file, goes and looks for MONGODB variable on .env and makes that = MONGO
 const SECRET = process.env.JWT;
 const userController = require('./controllers/user.controller');
+const movieController = require('./controllers/movie.controller');
+//const validateSession = require('./middleware/validate-session');
 
 mongoose.connect(`${MONGO}/movies`) // generate to a specific collection that is being targeted. This is MIDDLEWARE step. Sometimes, MONGO variable (MONGODB in .env) may need to be adjusted away from localhost
 
@@ -16,6 +18,9 @@ db.once("open", () => console.log(`Connected: ${MONGO}/movies`)); // event liste
 app.use(express.json()); 
 
 app.use('/user', userController);
+//app.use(validateSession); // all routes below validation when used 
+app.use('/movies', movieController);
+
 
 app.listen(PORT, () => console.log(`Movies: ${PORT}`)); // PORT 1 is pointing to line 5
 
